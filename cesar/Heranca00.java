@@ -1,8 +1,9 @@
 public class Heranca00 {
     public static void main(String[] args) {
         Cachorro cao1 = new Cachorro("Afonso", "Vira lata", "Caramelo", 2);
-        Cachorro cao2 = new Cachorro("Clóvis", "Shitzu", "Marrom", 2);
-        Cachorro cao3 = new Cachorro("Juca", "Pastor Alemao", "Preto", 2);
+        Cachorro cao2 = new Cachorro("Clóvis", "Shitzu", "Marrom", 4);
+        Cachorro cao3 = new Cachorro("Juca", "Pastor Alemao", "Preto", 3);
+        Gato gat1 = new Gato("Puma", "Persa", "Preto", 2);
 
         cao1.atraphalharSono();
         System.out.println(cao1);
@@ -10,6 +11,9 @@ public class Heranca00 {
         System.out.println(cao2);
         cao3.atraphalharSono();
         System.out.println(cao3);
+
+        gat1.atraphalharSono();
+        System.out.println(gat1);
     }
 }
 
@@ -36,6 +40,15 @@ abstract class Animal{
 class Cachorro extends Animal{
     public Cachorro(String nome, String raca, String cor, int idade){ // metodo construtor, o que define o cão
         this.som = "au au au";
+        this.nome = nome;
+        this.raca = raca;
+        this.cor = cor;
+        this.idade = idade;
+    }
+}
+class Gato extends Animal{
+public Gato(String nome, String raca, String cor, int idade){ // metodo construtor, o que define o gato
+        this.som = "miau miau";
         this.nome = nome;
         this.raca = raca;
         this.cor = cor;
