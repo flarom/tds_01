@@ -1,8 +1,8 @@
 public class Heranca00 {
     public static void main(String[] args) {
-        Cachorro cao1 = new Cachorro("Afonso");
-        Cachorro cao2 = new Cachorro("Juca");
-        Cachorro cao3 = new Cachorro("Fausto");
+        Cachorro cao1 = new Cachorro("Afonso", "Vira lata", "Caramelo", 2);
+        Cachorro cao2 = new Cachorro("Clóvis", "Shitzu", "Marrom", 2);
+        Cachorro cao3 = new Cachorro("Juca", "Pastor Alemao", "Preto", 2);
 
         cao1.atraphalharSono();
         System.out.println(cao1);
@@ -34,11 +34,11 @@ abstract class Animal{
     }
 }
 class Cachorro extends Animal{
-    public Cachorro(String nome){ // metodo construtor, o que define o cão
+    public Cachorro(String nome, String raca, String cor, int idade){ // metodo construtor, o que define o cão
         this.som = "au au au";
         this.nome = nome;
-        this.raca = "vira lata";
-        this.cor = "caramelo";
-        this.idade = 2;
+        this.raca = raca;
+        this.cor = cor;
+        this.idade = idade;
     }
 }
