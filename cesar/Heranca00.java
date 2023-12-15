@@ -1,15 +1,15 @@
-public class Aula02 {
+public class Heranca00 {
     public static void main(String[] args) {
-        Caramelo Afonso = new Caramelo();
-        Shitzu Lulu = new Shitzu();
-        Pintcher Bafome = new Pintcher();
+        Cachorro cao1 = new Cachorro("Afonso");
+        Cachorro cao2 = new Cachorro("Juca");
+        Cachorro cao3 = new Cachorro("Fausto");
 
-        Afonso.atraphalharSono();
-        Afonso.descrever();
-        Lulu.atraphalharSono();
-        Lulu.descrever();
-        Bafome.atraphalharSono();
-        Bafome.descrever();
+        cao1.atraphalharSono();
+        System.out.println(cao1);
+        cao2.atraphalharSono();
+        System.out.println(cao2);
+        cao3.atraphalharSono();
+        System.out.println(cao3);
     }
 }
 
@@ -21,45 +21,24 @@ abstract class Animal{
     int idade;
 
     public void atraphalharSono(){
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 3; i++) {
             System.out.println(this.som);
         }
     }
-    public void descrever(){
-        System.out.println(
-            "Nome: " +this.nome + "\n" + 
-            "Raca: " +this.raca + "\n" +
-            "Cor: " +this.cor + "\n" +
-            "Idade: " +this.idade + "\n");
+    public String toString(){ // representa a classe atual em forma de string
+        return "Nome: " + this.nome + "\n" +
+            "Raca: " + this.raca + "\n" +
+            "Cor: " + this.cor + "\n" +
+            "Idade: " + this.idade + " anos \n" +
+            "Onomatopeia: " + this.som + "\n";
     }
 }
-abstract class Cachorro extends Animal{
-    public Cachorro(){
+class Cachorro extends Animal{
+    public Cachorro(String nome){ // metodo construtor, o que define o cão
         this.som = "au au au";
-    }
-}
-
-class Caramelo extends Cachorro{
-    public Caramelo(){
-        this.nome = "Afonso";
+        this.nome = nome;
         this.raca = "vira lata";
         this.cor = "caramelo";
-        this.idade = 2;
-    }
-}
-class Shitzu extends Cachorro{
-    public Shitzu(){
-        this.nome = "Lulu";
-        this.raca = "Shitzu";
-        this.cor = "Marrom";
-        this.idade = 1;
-    }
-}
-class Pintcher extends Cachorro{
-    public Pintcher(){
-        this.nome = "Bafome";
-        this.raca = "Pintcher";
-        this.cor = "Marrom";
         this.idade = 2;
     }
 }
