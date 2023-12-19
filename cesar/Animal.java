@@ -11,10 +11,10 @@ abstract class Animal{
         }
     }
     public String toString(){ // representa a classe atual em forma de string
-        return "Nome: " + this.nome + "\n" +
-            "Raca: " + this.raca + "\n" +
-            "Cor: " + this.cor + "\n" +
-            "Idade: " + this.idade + " anos \n" +
-            "Onomatopeia: " + this.som + "\n";
+        return  "Nome: "        + this.nome     + "\n"   +
+                "Raca: "        + this.raca     + "\n"   +
+                "Cor: "         + this.cor      + "\n" +
+                "Idade: "       + this.idade    + " anos \n" +
+                "Onomatopeia: " + this.som      + "\n";
     }
 }
