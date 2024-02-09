@@ -1,9 +1,13 @@
 class Atv2{
     public static void main(String[] args){
-        String wrd = "";
-        for(String argument : args){
-            wrd = argument.toString()  + "-" + wrd;
+        String palavra = "";
+        String separador = "";
+
+        for (int i = 0; i < args.length; i++){
+            palavra =(args[i] + separador) + palavra;
+            separador = "-";
         }
-        System.out.println(wrd.toString());
+
+        System.out.println(palavra);
     }
 }
