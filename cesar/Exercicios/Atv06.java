@@ -6,7 +6,7 @@ public class Atv06{
 
         for(int pos = 0; pos < args.length; pos++){
             palavras += args[pos].toLowerCase();
-            if(pos < args.length){
+            if(pos < args.length -1){
                 palavras += " ";
             }
         }
