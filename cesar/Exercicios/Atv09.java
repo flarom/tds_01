@@ -5,7 +5,7 @@ public class Atv09{
         String palavra = "";
 
         for(int i = 0; i < args.length; i++){
-            palavra += args[i].toLowerCase();
+            palavra += args[i];
             if(i < args.length -1){
                 palavra += "-";
             }

@@ -1,34 +1,12 @@
-// Leia uma frase e converta para "pascalCase"
+// Leia uma frase e converta para "PascalCase"
 
 public class Atv11{
     public static void main(String[] args) {
-        String palavra = "";
-
+        String pascalCase = "";
         for(int i = 0; i < args.length; i++){
-            palavra += paraPascalCase(args[i]);
+            pascalCase = args[i].substring(0,1).toUpperCase() + args[i].substring(1);
+            System.out.print(pascalCase);
         }
-        System.out.println(palavra);
-    }
-
-    public static String paraPascalCase(String palavra) {
-        StringBuilder pascalCase = new StringBuilder();
-        boolean proxPascalCase = true;
-
-        for(char c : palavra.toCharArray()){
-            if(Character.isLetterOrDigit(c)){
-                if(proxPascalCase){
-                    pascalCase.append(Character.toUpperCase(c));
-                    proxPascalCase = false;
-                }
-                else{
-                    pascalCase.append(Character.toLowerCase(c));
-                }
-            }
-            else{
-                proxPascalCase = true;
-            }
-        }
-
-        return pascalCase.toString();
+        System.out.println();
     }
 }
