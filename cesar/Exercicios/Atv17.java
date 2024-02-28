@@ -9,11 +9,12 @@ public class Atv17 {
             for (int y = 0; y < palavra.length(); y++) {
                 if (palavra.charAt(y) == 'a' || palavra.charAt(y) == 'A') {
                     palavra = palavra.substring(0, y) + "@" + palavra.substring(y + 1);
-                    if(y > 0){
-                        palavra = palavra + " ";
-                    }
                 }
             }
+            if(x > -1){
+                palavra = palavra + " ";
+            }
+
             System.out.print(palavra);
         }
         System.out.println();
