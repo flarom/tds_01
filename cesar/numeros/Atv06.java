@@ -1,27 +1,23 @@
 // Crie um programa para verificar se os números informados são primo ou não.
-public class Atv06{
+public class Atv06 {
     public static void main(String[] args) {
-        int x = 0;
-        for(int i = 0; i < args.length; i++){
+        for (int i = 0; i < args.length; i++) {
             int numero = Integer.parseInt(args[i]);
-            
-            if (isPrimo(numero)) {
-                System.out.print(numero + "\té primo\n");
+            boolean primo = false;
+
+            for (int j = 2; j <= numero / 2; j++) {
+                if (numero % j == 0) {
+                    primo = true;
+                    break;
+                }
+            }
+
+            if (!primo) {
+                System.out.print("\u001B[32m" + numero + " é primo\n");
             } else {
-                System.out.print(numero + "\tnão é primo\n");
+                System.out.print("\u001B[31m" + numero + " não é primo\n");
             }
         }
         System.out.println();
-    }
-    public static boolean isPrimo(int numero) {
-        if (numero <= 1) {
-            return false;
-        }
-        for (int i = 2; i <= Math.sqrt(numero); i++) {
-            if (numero % i == 0) {
-                return false;
-            }
-        }
-        return true;
     }
 }
