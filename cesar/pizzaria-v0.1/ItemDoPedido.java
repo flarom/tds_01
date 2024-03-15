@@ -12,7 +12,13 @@ public class ItemDoPedido{
     public void setValor(Double valor){
         this.valor = valor;
     }
+    public String getTipo(){
+        return this.tipo;
+    }
+    public String getSabor(){
+        return this.sabor;
+    }
     public double getValor(){
-        return this.valor();
+        return this.valor;
     }
 }

@@ -2,12 +2,12 @@
 
 public class Atv14 {
     public static void main(String[] args) {
-        if (args.length == 3) {
             Double x = Double.parseDouble(args[0]);
             Double y = Double.parseDouble(args[2]);
-            Double res = 0;
-
+            
+            Double res = 0.0;
             calcular calc = new calcular(x, y);
+            
             switch (args[1]) {
                 case "+":
                     res = calc.somar(x,y);
@@ -26,37 +26,57 @@ public class Atv14 {
                         System.out.println("Não é possível dividir por zero!");
                     }
                     break;
+                case "^":
+                    res = calc.potenciar(x,y);
+                    break;
+                case "§":
+                    res = calc.raiz(x);
+                    break;
+                case "!":
+                    break;
                 default:
                     System.out.println("Operador invalido!");
                     break;
             }
 
             System.out.println(res);
-        } else {
-            System.out.println("Insira 3 argumentos!");
-        }
     }
 }
 
-class calcular{
+class calcular {
     private Double x = 0.0;
     private Double y = 0.0;
 
     // metodo construtor de calcular
-    calcular(double x, double y){
+    calcular(double x, double y) {
         this.x = x;
         this.y = y;
     }
-    public double somar(double x, double y){
-        return(this.x+this.y);
+
+    public double somar(double x, double y) {
+        return (this.x + this.y);
     }
-    public double subtrair(double x, double y){
-        return(this.x-this.y);
+
+    public double subtrair(double x, double y) {
+        return (this.x - this.y);
     }
-    public double multiplicar(double x, double y){
-        return(this.x*this.y);
+
+    public double multiplicar(double x, double y) {
+        return (this.x * this.y);
     }
-    public double dividir(double x, double y){
-        return(this.x/this.y);
+
+    public double dividir(double x, double y) {
+        return (this.x / this.y);
+    }
+
+    public double potenciar(double x, double y) {
+        return (Math.pow(x, y));
+    }
+
+    public double raiz(double x) {
+        return (Math.sqrt(x));
+    }
+    public double fatorial(double x){
+        return (Math.fatorial(x));
     }
 }

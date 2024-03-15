@@ -8,7 +8,7 @@ public class Pizzaria{
         Pedido pedido = new Pedido();
         ItemDoPedido item = new ItemDoPedido();
 
-        System.out.println("Informe o tipo da pizza:");
+        System.out.println("Informe o tipo da pizza (Tradicional/Especial/*):");
         item.setTipo(scan.nextLine());
 
         System.out.println("Informe o sabor da pizza:");
@@ -20,7 +20,8 @@ public class Pizzaria{
         pedido.addItemDoPedido(item);
 
         System.out.println("Informe o nome do cliente:");
-        pedido.setCliente(scan.next());
+        scan.nextLine();
+        pedido.setCliente(scan.nextLine());
 
         System.out.println("Informe a taxa da entrega:");
         pedido.setTxEntrega(scan.nextDouble());
