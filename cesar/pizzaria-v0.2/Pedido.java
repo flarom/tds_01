@@ -3,7 +3,6 @@ public class Pedido{
     private String cliente = "";
     private double txEntrega = 0.0;
     
-
     public void addItemDoPedido(ItemDoPedido item){
         this.itemDoPedido = item;
     }
@@ -21,28 +20,15 @@ public class Pedido{
         System.out.println("________________________________________");
         System.out.println(" - - - - - Pizzaria Bate-Papo - - - - - ");
         System.out.println("________________________________________");
-        System.out.println(alinhar("Cliente:", this.cliente));
+        System.out.println("Cliente:\t" + this.cliente);
         System.out.println("________________________________________");
-        System.out.println("Setor:");
+        System.out.println("Setor:\t");
         System.out.println("________________________________________");
-        System.out.println(alinhar("Tipo da pizza:", this.itemDoPedido.getTipo()));
-        System.out.println(alinhar("Sabor da pizza:", this.itemDoPedido.getSabor()));
+        System.out.println("Tipo da pizza:\t"+ this.itemDoPedido.getTipo());
+        System.out.println("Sabor da pizza:\t"+ this.itemDoPedido.getSabor());
+        System.out.println("Valor:\t\t"+ String.valueOf(this.itemDoPedido.getValor()));
+        System.out.println("Tx. Entrega:\t"+ String.valueOf(this.txEntrega));
+        System.out.println("Total:\t\t"+ String.valueOf(this.getTotal()));
         System.out.println("________________________________________");
-        System.out.println(alinhar("Valor:", String.valueOf(this.itemDoPedido.getValor())));
-        System.out.println(alinhar("Tx. Entrega:", String.valueOf(this.txEntrega)));
-        System.out.println(alinhar("Total:", String.valueOf(this.getTotal())));
-        System.out.println("________________________________________");
-    }
-
-    private String alinhar(String titulo, String valor){
-        String espaços = "";
-        int compTitulo = titulo.length();
-        int compValor = valor.length();
-
-        for(int i = compValor; i < 40 - compTitulo; i++){
-            espaços += " ";
-        }
-
-        return titulo + espaços + valor;
     }
 }
