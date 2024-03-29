@@ -17,18 +17,17 @@ public class Pedido{
         return this.txEntrega + this.itemDoPedido.getValor();
     }
     public void imprimir(){
-        System.out.println("________________________________________");
+        System.out.println("________________________________________\n");
         System.out.println(" - - - - - Pizzaria Bate-Papo - - - - - ");
-        System.out.println("________________________________________");
+        System.out.println("________________________________________\n");
         System.out.println("Cliente:\t" + this.cliente);
-        System.out.println("________________________________________");
-        System.out.println("Setor:\t");
-        System.out.println("________________________________________");
-        System.out.println("Tipo da pizza:\t"+ this.itemDoPedido.getTipo());
+        System.out.println("________________________________________\n");
+        System.out.println("Setor:\t\taqui");
+        System.out.println("________________________________________\n");
         System.out.println("Sabor da pizza:\t"+ this.itemDoPedido.getSabor());
-        System.out.println("Valor:\t\t"+ String.valueOf(this.itemDoPedido.getValor()));
-        System.out.println("Tx. Entrega:\t"+ String.valueOf(this.txEntrega));
-        System.out.println("Total:\t\t"+ String.valueOf(this.getTotal()));
-        System.out.println("________________________________________");
+        System.out.println("Valor:\t\tR$"+ String.valueOf(this.itemDoPedido.getValor()));
+        System.out.println("Tx. Entrega:\tR$"+ String.valueOf(this.txEntrega));
+        System.out.println("Total:\t\tR$"+ String.valueOf(this.getTotal()));
+        System.out.println("________________________________________\n");
     }
 }

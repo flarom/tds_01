@@ -10,28 +10,13 @@ public class Pizzaria {
 
         String continuar;
         do {
-
-            System.out.println("Informe o tipo da pizza (Tradicional (R$40) / Especial (R$50)):");
-            String inp = scan.nextLine();
-            switch (inp) {
-                case "tradicional":
-                case "trad":
-                    item.addValor(40);
-                    break;
-                case "especial":
-                case "epec":
-                    item.addValor(50);
-            }
-            item.setTipo(inp);
+            System.out.println("Informe o tipo da pizza (tradicional [R$40] / especial [R$50]):");
+            item.addTipo(scan.nextLine().trim());
 
             System.out.println("Informe o sabor da pizza:");
             item.addSabor(scan.nextLine());
 
-            // System.out.println("Informe o valor da pizza:");
-            // item.addValor(scan.nextDouble());
-
             pedido.addItemDoPedido(item);
-            scan.nextLine();
 
             System.out.println("mais alguma coisa?");
             continuar = scan.nextLine();
@@ -42,6 +27,7 @@ public class Pizzaria {
 
         System.out.println("Informe a taxa da entrega:");
         pedido.setTxEntrega(scan.nextDouble());
+        scan.nextLine();
 
         pedido.imprimir();
         scan.close();
