@@ -10,11 +10,11 @@ public class Pizzaria {
 
         String continuar;
         do {
-            System.out.println("Informe o tipo da pizza (tradicional [R$40] / especial [R$50]):");
-            item.addTipo(scan.nextLine().trim());
+            System.out.println("Informe o tipo da pizza (tradicional/especial):");
+            item.setTipo(scan.nextLine().trim());
 
             System.out.println("Informe o sabor da pizza:");
-            item.addSabor(scan.nextLine());
+            item.setSabor(scan.nextLine());
 
             pedido.addItemDoPedido(item);
 
@@ -25,9 +25,8 @@ public class Pizzaria {
         System.out.println("Informe o nome do cliente:");
         pedido.setCliente(scan.nextLine());
 
-        System.out.println("Informe a taxa da entrega:");
-        pedido.setTxEntrega(scan.nextDouble());
-        scan.nextLine();
+        System.out.println("Informe a localização da entrega (centro/periferia/outro):");
+        pedido.setLocal(scan.nextLine().trim());
 
         pedido.imprimir();
         scan.close();
