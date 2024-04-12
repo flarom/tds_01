@@ -3,7 +3,7 @@ public class Pedido{
     private String cliente = "";
     private String local = "";
     
-    public void addItemDoPedido(ItemDoPedido item){
+    public void setItemDoPedido(ItemDoPedido item){
         this.itemDoPedido = item;
     }
     public void setCliente(String cliente){
@@ -28,17 +28,18 @@ public class Pedido{
         return calcFrete() + this.itemDoPedido.getValor();
     }
     public void imprimir(){
-        System.out.println("________________________________________\n");
+        System.out.println("________________________________________");
         System.out.println(" - - - - - Pizzaria Bate-Papo - - - - - ");
-        System.out.println("________________________________________\n");
+        System.out.println("________________________________________");
         System.out.println("Cliente:\t" + this.cliente);
-        System.out.println("________________________________________\n");
+        System.out.println("Localização:\t" + this.local);
+        System.out.println("________________________________________");
         System.out.println("Setor:\t\taqui");
-        System.out.println("________________________________________\n");
-        System.out.println("Sabor da pizza:\t"+ this.itemDoPedido.getSabor());
+        System.out.println("________________________________________");
+        System.out.println("Pizzas:\n"+ this.itemDoPedido.getSabores());
         System.out.println("Valor:\t\tR$"+ String.valueOf(this.itemDoPedido.getValor()));
         System.out.println("Tx. Entrega:\tR$"+ calcFrete());
         System.out.println("Total:\t\tR$"+ String.valueOf(this.getTotal()));
-        System.out.println("________________________________________\n");
+        System.out.println("________________________________________");
     }
 }

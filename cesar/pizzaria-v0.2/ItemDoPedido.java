@@ -11,10 +11,10 @@ public class ItemDoPedido{
         this.sabores.add(sabor);
     }
 
-    public String getSabor(){
+    public String getSabores(){
         String listaSabores = "";
         for(int i = 0; i < sabores.size(); i++){
-            listaSabores = listaSabores + (sabores.get(i)) + "\t" + (tipos.get(i)) + ";\n\t\t";
+            listaSabores = listaSabores + (sabores.get(i)) + " " + (tipos.get(i)) + ";\n";
         }
         return listaSabores;
     }
